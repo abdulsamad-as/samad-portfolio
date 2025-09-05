@@ -6,6 +6,7 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   line-height: 1.7;
+  margin: 0 auto;
 }
 
 /* 3D Canvas */
@@ -148,7 +149,7 @@ body {
 
 /* Sections */
 .section {
-  padding: 7rem 6%;
+  padding: 2rem ;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -474,7 +475,8 @@ h2 {
 
 .contact-form input,
 .contact-form textarea {
-  padding: 1.2rem;
+      padding: 2.2rem 26rem 2rem 2rem;
+ 
   border: 1px solid #00d9ff;
   background: rgba(0, 0, 0, 0.3);
   border-radius: 10px;
@@ -575,6 +577,155 @@ footer {
   box-shadow: 0 0 40px rgba(0, 217, 255, 0.8);
 }
 
+
+
+/* === NEW: Services Section === */
+.services .section-subtitle {
+  text-align: center;
+  color: #ccc;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  backdrop-filter: blur(8px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 217, 255, 0.15);
+  border-color: #00d9ff;
+}
+
+.service-card i {
+  font-size: 2.5rem;
+  color: #00d9ff;
+  margin-bottom: 1rem;
+}
+
+.service-card h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.service-card p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* === NEW: Testimonials Section === */
+
+.testimonials h2 {
+  color: #00d9ff;
+  margin-bottom: 2rem;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 1.8rem;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+}
+
+.testimonial-card p {
+  font-style: italic;
+  color: #ddd;
+  line-height: 1.7;
+}
+
+.testimonial-author {
+  margin-top: 1.2rem;
+  font-weight: 600;
+  color: #00d9ff;
+}
+
+/* === NEW: Why Choose Me? === */
+.why-me {
+  text-align: center;
+}
+
+.comparison-table {
+  max-width: 900px;
+  margin: 3rem auto;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.table-header {
+  display: flex;
+  background: rgba(0, 217, 255, 0.1);
+  color: #00d9ff;
+  font-weight: 600;
+  padding: 1rem 0;
+  padding-left: 2rem;
+  font-size: 1.5rem;
+}
+
+.table-row {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 217, 255, 0.1);
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-row .feature,
+.table-row .other,
+.table-row .me {
+  
+  padding: 2rem;
+  text-align: left;
+ 
+ 
+}
+
+.table-row .other {
+  color: #f44336;
+}
+
+.table-row .me {
+  color: #4caf50;
+}
+
+.table-row .other i,
+.table-row .me i {
+  margin-right: 6px;
+}
+
+  
+
+
 /* Responsive */
 @media (max-width: 768px) {
   
@@ -643,5 +794,24 @@ h2{
 }
 .project-card{
   margin-top: 20px;
+}
+
+.table-header, .table-row {
+    flex-direction: column;
+  }
+
+  .table-header > div,
+  .table-row > div {
+    padding: 1rem;
+  }
+
+  .services-grid,
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+.contact-form input,
+.contact-form textarea{
+   padding: 1.2rem;
 }
 }
