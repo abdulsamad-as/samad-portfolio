@@ -21,6 +21,9 @@ body {
   opacity: 0.15;
 }
 
+.flex{
+  display: flex;
+}
 /* Header */
 .centered-header {
   position: fixed;
@@ -220,6 +223,7 @@ h2 {
   border: 1px solid rgba(0, 217, 255, 0.2);
   border-radius: 16px;
   padding: 2.2rem;
+  width: 75%;
   backdrop-filter: blur(10px);
   transition: all 0.4s ease;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
@@ -231,7 +235,9 @@ h2 {
   border-color: #00d9ff;
   background: rgba(0, 217, 255, 0.08);
 }
-
+.mt-left50{
+  margin-left: 58px;
+}
 .skill-box h3 {
   color: #00d9ff;
   font-size: 1.5rem;
@@ -258,6 +264,23 @@ h2 {
 .skill-box i {
   color: #00d9ff;
   font-size: 1.3rem;
+}
+.skill-box .skills-content {
+  display: flex;
+ 
+     gap: 3rem;
+}
+
+.skill-box .skills-content .skill-image {
+width: 50%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.skill-box:hover .skill-image {
+  transform: scale(1.03);
 }
 
 /* Projects Section */
@@ -818,4 +841,12 @@ h2{
 .contact-form textarea{
    padding: 1.2rem;
 }
+.skill-box .skills-content{
+  display: unset;
+}
+.mt-left50{
+  margin-left: unset;
+}
+.skill-box .skills-content .skill-image {
+width: 100%;}
 }
