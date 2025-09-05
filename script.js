@@ -141,11 +141,11 @@ window.addEventListener("scroll", () => {
 });
 
 // Form Submit
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-  alert("Thank you! I'll get back to you soon.");
-  this.reset();
-});
+// document.getElementById("contactForm").addEventListener("submit", function(e) {
+//   e.preventDefault();
+//   alert("Thank you! I'll get back to you soon.");
+//   this.reset();
+// });
 
 // On Load
 window.onload = () => {
