@@ -1,220 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title></title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
 
-  <!-- Google Fonts: Poppins -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="assests/css/style.css" />
-  <link rel="icon" type="image/png" href="assests/images/logosss.png">
-</head>
-<body>
+    <!-- Styles -->
+    <link rel="stylesheet" href="assests/css/style.css" />
+    <link rel="icon" type="image/png" href="assests/images/logosss.png" />
+  </head>
+  <body>
+    <!-- 3D Background Canvas -->
+    <!-- تمہارے ہر HTML صفحے کے <body> کے شروع میں یہ شامل کریں -->
+    <div
+      id="canvas-container"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      "
+    ></div>
 
-  <!-- 3D Background Canvas -->
- <!-- تمہارے ہر HTML صفحے کے <body> کے شروع میں یہ شامل کریں -->
-<div id="canvas-container" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></div>
+    <!-- Header -->
+    <header class="centered-header">
+      <div class="logo">Abdul Samad</div>
+      <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#github">GitHub</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </header>
 
-  <!-- Header -->
-  <header class="centered-header">
-    <div class="logo">Abdul Samad</div>
-    <div class="menu-toggle" id="menuToggle">
-      <i class="fas fa-bars"></i>
-    </div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#github">GitHub</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </header>
-
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1 id="animated-headline"></h1>
-      <p class="subtitle">Crafting Digital Experiences with Code & Creativity</p>
-      <button class="cta-btn" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">
-        View My Work
-      </button>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="section about">
-    <h2>About Me</h2>
-    <div class="about-content">
-      <div class="about-text">
-        <h3 class="about-name"><span id="name-typewriter"></span></h3>
-        <p class="about-bio">
-         I am a passionate and detail-oriented <strong>Frontend Developer</strong> with a strong focus on crafting modern, responsive, and high-performance web interfaces. With expertise in <strong> HTML, CSS, and JavaScript,</strong> I specialize in building clean, scalable, and pixel-perfect user experiences that perform seamlessly across all devices and browsers.
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1 id="animated-headline"></h1>
+        <p class="subtitle">
+          Crafting Digital Experiences with Code & Creativity
         </p>
-        <p class="about-bio">
-      I leverage modern technologies such as <strong> GSAP</strong> for smooth animations, <strong>Three.js</strong>  for interactive 3D visuals, and <strong> React </strong> to develop dynamic, component-based applications. My development approach emphasizes <strong>clean code, performance optimization, accessibility,  </strong> and visual precision — turning design concepts into fast, functional, and user-friendly web products.
-        </p>
+        <button
+          class="cta-btn"
+          onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})"
+        >
+          View My Work
+        </button>
       </div>
-      <div class="skills-container">
-        <div class="skill-box">
-          <h3><i class="fas fa-laptop-code"></i> Core Skills</h3>
-          <ul>
-            <li><i class="fab fa-html5"></i> HTML5 & Semantic Markup</li>
-            <li><i class="fab fa-css3-alt"></i> CSS3, Flexbox, Grid</li>
-            <li><i class="fab fa-js"></i> JavaScript (ES6+)</li>
-            <li><i class="fab fa-react"></i> React & JSX</li>
-          </ul>
-        </div>
-        <div class="skill-box">
-          <h3><i class="fas fa-tools"></i> Tools & Libraries</h3>
-          <ul>
-            <li><i class="fas fa-magic"></i> GSAP Animations</li>
-            <li><i class="fas fa-cube"></i> Three.js (3D Web)</li>
-            <li><i class="fas fa-code"></i> Responsive Design</li>
-            <li><i class="fab fa-github"></i> Git & GitHub</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Experience Section -->
-  <section id="experience" class="section experience">
-    <h2>Work Experience</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <h3>Frontend Developer Intern</h3>
-        <p class="timeline-subtitle">BitBlaze Tech LLC
- • July 2025 –  sep 2025</p>
-        <p>Developed responsive web pages using HTML, CSS, and JavaScript. Implemented smooth animations and interactive effects for an engaging user experience.</p>
-      </div>
-      <div class="timeline-item">
-        <h3>Freelance Web Developer</h3>
-        <p class="timeline-subtitle">Fiver • 2025 – Present</p>
-        <p> client websites with clean code, mobile-first design, and SEO-friendly structure.</p>
-      </div>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="section about">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <h3 class="about-name"><span id="name-typewriter"></span></h3>
+          <p class="about-bio">
+            I am a passionate and detail-oriented
+            <strong>Frontend Developer</strong> with a strong focus on crafting
+            modern, responsive, and high-performance web interfaces. With
+            expertise in <strong> HTML, CSS, and JavaScript,</strong> I
+            specialize in building clean, scalable, and pixel-perfect user
+            experiences that perform seamlessly across all devices and browsers.
+          </p>
+          <p class="about-bio">
+            I leverage modern technologies such as <strong> GSAP</strong> for
+            smooth animations, <strong>Three.js</strong> for interactive 3D
+            visuals, and <strong> React </strong> to develop dynamic,
+            component-based applications. My development approach emphasizes
+            <strong
+              >clean code, performance optimization, accessibility,
+            </strong>
+            and visual precision — turning design concepts into fast,
+            functional, and user-friendly web products.
+          </p>
+        </div>
+        <div class="skills-container">
+          <div class="skill-box">
+            <h3><i class="fas fa-laptop-code"></i> Core Skills</h3>
+            <ul>
+              <li><i class="fab fa-html5"></i> HTML5 & Semantic Markup</li>
+              <li><i class="fab fa-css3-alt"></i> CSS3, Flexbox, Grid</li>
+              <li><i class="fab fa-js"></i> JavaScript (ES6+)</li>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section projects">
-    <h2>Web Development Projects</h2>
-    <div class="project-grid">
-      
-      <!-- Your Project -->
-      <div class="project-card">
-        <img src="assests/images/image.png" alt="Octoberchic Art Portfolio" />
-        <h3>Octoberchic Art – Artist Portfolio</h3>
-        <p>A modern and visually stunning portfolio website for a digital artist, featuring interactive gallery sections, smooth scroll animations, and a responsive design that showcases artwork in an elegant way.</p>
-        <div class="project-links">
-          <a href="https://github.com/abdulsamad-as/octoberhic-art" ><i class="fab fa-github"></i> Code</a>
-          <a href="https://abdulsamad-as.github.io/octoberhic-art/" ><i class="fas fa-external-link-alt"></i> Live</a>
+              <li><i class="fas fa-mobile-alt"></i> Responsive Design</li>
+              <!-- New -->
+            </ul>
+          </div>
+          <div class="skill-box">
+            <h3><i class="fas fa-tools"></i> Tools & Libraries</h3>
+            <ul>
+              <li><i class="fas fa-magic"></i> GSAP Animations</li>
+              <li><i class="fas fa-cube"></i> Three.js (3D Web)</li>
+              <li><i class="fas fa-code"></i> Responsive Design</li>
+              <li><i class="fab fa-github"></i> Git & GitHub</li>
+            </ul>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="project-card">
-        <img src="assests/images/js.png" alt="3D Interactive Portfolio" />
-        <h3>Extraordinary Talent – Recruitment 
-
-</h3>
-        <p>A modern, responsive recruitment platform with smooth animations, interactive data visualization, and a sleek dark mode UI. Designed to attract top talent and showcase company capabilities with an engaging user experience.</p>
-        <div class="project-links">
-          <a href="https://github.com/abdulsamad-as/Affinity-core" ><i class="fab fa-github"></i> Code</a>
-          <a href="#" class="disabled"><i class="fas fa-external-link-alt"></i> Live</a>
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+      <h2>Work Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Frontend Developer Intern</h3>
+          <p class="timeline-subtitle">
+            BitBlaze Tech LLC • July 2025 – sep 2025
+          </p>
+          <p>
+            Developed responsive web pages using HTML, CSS, and JavaScript.
+            Implemented smooth animations and interactive effects for an
+            engaging user experience.
+          </p>
+        </div>
+        <div class="timeline-item">
+          <h3>Freelance Web Developer</h3>
+          <p class="timeline-subtitle">Fiver • 2025 – Present</p>
+          <p>
+            client websites with clean code, mobile-first design, and
+            SEO-friendly structure.
+          </p>
         </div>
       </div>
+    </section>
 
-      <div class="project-card">
-        <img src="assests/images/ja.png" alt="Admin Dashboard UI" />
-        <h3>Content Engine – Creator Marketing </h3>
-        <p>A powerful marketing platform for content creators and brands, featuring video testimonials, client spotlight sections, and a clean, modern UI. Designed to showcase success stories and build trust with potential clients.</p>
-        <div class="project-links">
-          <a href="https://github.com/abdulsamad-as/Content-Engine-Creator-Marketing" ><i class="fab fa-github"></i> Code</a>
-          <a href="https://abdulsamad-as.github.io/Content-Engine-Creator-Marketing/" ><i class="fas fa-external-link-alt"></i> Live</a>
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+      <h2>Web Development Projects</h2>
+      <div class="project-grid">
+        <!-- Your Project -->
+        <div class="project-card">
+          <img src="assests/images/image.png" alt="Octoberchic Art Portfolio" />
+          <h3>Octoberchic Art – Artist Portfolio</h3>
+          <p>
+            A modern and visually stunning portfolio website for a digital
+            artist, featuring interactive gallery sections, smooth scroll
+            animations, and a responsive design that showcases artwork in an
+            elegant way.
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/abdulsamad-as/octoberhic-art"
+              ><i class="fab fa-github"></i> Code</a
+            >
+            <a href="https://abdulsamad-as.github.io/octoberhic-art/"
+              ><i class="fas fa-external-link-alt"></i> Live</a
+            >
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="assests/images/js.png" alt="3D Interactive Portfolio" />
+          <h3>Extraordinary Talent – Recruitment</h3>
+          <p>
+            A modern, responsive recruitment platform with smooth animations,
+            interactive data visualization, and a sleek dark mode UI. Designed
+            to attract top talent and showcase company capabilities with an
+            engaging user experience.
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/abdulsamad-as/Affinity-core"
+              ><i class="fab fa-github"></i> Code</a
+            >
+            <a href="#" class="disabled"
+              ><i class="fas fa-external-link-alt"></i> Live</a
+            >
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="assests/images/ja.png" alt="Admin Dashboard UI" />
+          <h3>Content Engine – Creator Marketing</h3>
+          <p>
+            A powerful marketing platform for content creators and brands,
+            featuring video testimonials, client spotlight sections, and a
+            clean, modern UI. Designed to showcase success stories and build
+            trust with potential clients.
+          </p>
+          <div class="project-links">
+            <a
+              href="https://github.com/abdulsamad-as/Content-Engine-Creator-Marketing"
+              ><i class="fab fa-github"></i> Code</a
+            >
+            <a
+              href="https://abdulsamad-as.github.io/Content-Engine-Creator-Marketing/"
+              ><i class="fas fa-external-link-alt"></i> Live</a
+            >
+          </div>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
-
-  <!-- GitHub Section -->
-  <section id="github" class="section github">
-    <h2>GitHub Highlights</h2>
-    <p class="github-subtitle">Here are some of my most active repositories.</p>
-    <div class="github-grid">
-      <div class="github-card">
-        <h3><i class="fab fa-github"></i> Octoberchic Art – Artist Portfolio</h3>
-        <p>A modern and visually stunning portfolio website for a digital artist, featuring interactive gallery sections, smooth scroll animations, and a responsive design that showcases artwork in an elegant way.</p>
-        <div class="github-stats">
-          <span><i class="fas fa-star"></i> 42</span>
-          <span><i class="fas fa-code-branch"></i> 8</span>
+    <!-- GitHub Section -->
+    <section id="github" class="section github">
+      <h2>GitHub Highlights</h2>
+      <p class="github-subtitle">
+        Here are some of my most active repositories.
+      </p>
+      <div class="github-grid">
+        <div class="github-card">
+          <h3>
+            <i class="fab fa-github"></i> Octoberchic Art – Artist Portfolio
+          </h3>
+          <p>
+            A modern and visually stunning portfolio website for a digital
+            artist, featuring interactive gallery sections, smooth scroll
+            animations, and a responsive design that showcases artwork in an
+            elegant way.
+          </p>
+          <div class="github-stats">
+            <span><i class="fas fa-star"></i> 42</span>
+            <span><i class="fas fa-code-branch"></i> 8</span>
+          </div>
+          <a
+            href="https://github.com/abdulsamad-as/octoberhic-art"
+            class="github-btn"
+          >
+            View on GitHub <i class="fab fa-github"></i>
+          </a>
         </div>
-        <a href="https://github.com/abdulsamad-as/octoberhic-art" class=" github-btn">
-          View on GitHub <i class="fab fa-github"></i>
-        </a>
-      </div>
-      <div class="github-card">
-        <h3><i class="fab fa-github"></i> Extraordinary Talent – Recruitment </h3>
-        <p>A modern, responsive recruitment platform with smooth animations, interactive data visualization, and a sleek dark mode UI. Designed to attract top talent and showcase company capabilities with an engaging user experience.</p>
-        <div class="github-stats">
-          <span><i class="fas fa-star"></i> 28</span>
-          <span><i class="fas fa-code-branch"></i> 5</span>
+        <div class="github-card">
+          <h3>
+            <i class="fab fa-github"></i> Extraordinary Talent – Recruitment
+          </h3>
+          <p>
+            A modern, responsive recruitment platform with smooth animations,
+            interactive data visualization, and a sleek dark mode UI. Designed
+            to attract top talent and showcase company capabilities with an
+            engaging user experience.
+          </p>
+          <div class="github-stats">
+            <span><i class="fas fa-star"></i> 28</span>
+            <span><i class="fas fa-code-branch"></i> 5</span>
+          </div>
+          <a
+            href="https://github.com/abdulsamad-as/Affinity-core"
+            class="github-btn"
+          >
+            View on GitHub <i class="fab fa-github"></i>
+          </a>
         </div>
-        <a href="https://github.com/abdulsamad-as/Affinity-core" class=" github-btn">
-          View on GitHub <i class="fab fa-github"></i>
-        </a>
-      </div>
-      <div class="github-card">
-        <h3><i class="fab fa-github"></i> Content Engine – Creator Marketing</h3>
-        <p>A modern and visually stunning portfolio website for a digital artist, featuring interactive gallery sections, smooth scroll animations, and a responsive design that showcases artwork in an elegant way.</p>
-        <div class="github-stats">
-          <span><i class="fas fa-star"></i> 35</span>
-          <span><i class="fas fa-code-branch"></i> 12</span>
+        <div class="github-card">
+          <h3>
+            <i class="fab fa-github"></i> Content Engine – Creator Marketing
+          </h3>
+          <p>
+            A modern and visually stunning portfolio website for a digital
+            artist, featuring interactive gallery sections, smooth scroll
+            animations, and a responsive design that showcases artwork in an
+            elegant way.
+          </p>
+          <div class="github-stats">
+            <span><i class="fas fa-star"></i> 35</span>
+            <span><i class="fas fa-code-branch"></i> 12</span>
+          </div>
+          <a
+            href="https://github.com/abdulsamad-as/Content-Engine-"
+            class="github-btn"
+          >
+            View on GitHub <i class="fab fa-github"></i>
+          </a>
         </div>
-        <a href="https://github.com/abdulsamad-as/Content-Engine-" class=" github-btn">
-          View on GitHub <i class="fab fa-github"></i>
-        </a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-<section id="contact" class="section contact">
-  <h2>Contact Me</h2>
-  <form class="contact-form" id="contactForm" action="https://formspree.io/f/meolpnyv" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+      <h2>Contact Me</h2>
+      <form
+        class="contact-form"
+        id="contactForm"
+        action="https://formspree.io/f/meolpnyv"
+        method="POST"
+      >
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          rows="5"
+          required
+        ></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
 
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Abdul Samad. All Rights Reserved.</p>
+      <div class="social-links">
+        <!-- 🔻 🔻 🔻 یہاں اپنے اصل لنکس ڈالیں 🔻 🔻 🔻 -->
+        <a
+          href="https://github.com/abdulsamad-as"
+          target="_blank"
+          title="GitHub"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/abdul-samad-97828327a/"
+          target="_blank"
+          title="LinkedIn"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://x.com/Samad44728145" target="_blank" title="Twitter"
+          ><i class="fab fa-twitter"></i
+        ></a>
+      </div>
+    </footer>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Abdul Samad. All Rights Reserved.</p>
-    <div class="social-links">
-      <!-- 🔻 🔻 🔻 یہاں اپنے اصل لنکس ڈالیں 🔻 🔻 🔻 -->
-      <a href="https://github.com/abdulsamad-as" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/abdul-samad-97828327a/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="https://x.com/Samad44728145" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-    </div>
-  </footer>
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="backToTop">
+      <i class="fas fa-arrow-up"></i>
+    </a>
 
-  <!-- Back to Top Button -->
-  <a href="#home" class="back-to-top" id="backToTop">
-    <i class="fas fa-arrow-up"></i>
-  </a>
-
-  <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="script.js"></script>
-</body>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
