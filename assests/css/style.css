@@ -694,6 +694,7 @@ footer {
 .table-row {
   display: flex;
   border-bottom: 1px solid rgba(0, 217, 255, 0.1);
+  
 }
 
 .table-row:last-child {
@@ -704,11 +705,14 @@ footer {
 .table-row .other,
 .table-row .me {
   
-  padding: 2rem;
-  text-align: left;
- 
- 
+
+  flex: 1;
+  padding: 1.2rem;
+  text-align: center;
+  font-size: 1.1rem;
 }
+ 
+
 
 .table-row .other {
   color: #f44336;
